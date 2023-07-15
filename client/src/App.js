@@ -1,9 +1,9 @@
-import Home from "./Pages/Home";
+import Layout from "./Layout/Layout";
 
 const App = () => {
   return (
     <>
-      <Home />
+      <Layout />
     </>
   );
 };
