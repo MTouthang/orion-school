@@ -8,8 +8,8 @@ const Nav = () => {
         <p className="text-white bg-up-nav-color mx-auto text-center italic">
           The fear of the Lord is the beginning of Wisdom and knowledge
         </p>
-        {/* //TODO: slide smooth in and smooth out */}
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+        {/* //TODO: slide smooth in image */}
+        <div className="max-w-screen-xl text-white flex flex-wrap items-center justify-between mx-auto p-4 ">
           <a href="#Home" className="flex items-center">
             <img
               src={logo}
@@ -49,11 +49,11 @@ const Nav = () => {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
               <li>
                 <a
                   href="#a"
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
+                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0  md:dark:text-blue-500"
                   aria-current="page"
                 >
                   Home

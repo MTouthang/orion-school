@@ -41,7 +41,7 @@ const Hero = () => {
   };
 
   return (
-    <div className=" m-auto relative border-2">
+    <div className=" m-auto relative ">
       {/* listing the images */} 
       <div className="flex items-center justify-center relative ">
         {imageList.length > 0 &&
@@ -53,7 +53,7 @@ const Hero = () => {
                   currentIndex === index ? "block" : "hidden"
                 } h-[450px] w-[1200px] `}
               >
-                {/* TODO: scroll smooth or slides smooth */}
+                {/* TODO: scroll smooth or slides */}
                 <img
                   src={image.url}
                   alt={index}
