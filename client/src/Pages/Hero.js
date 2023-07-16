@@ -1,9 +1,10 @@
 import { React, useState } from "react";
+import carousel from "../Assets/carouselImage/1.jpg";
 
 const Hero = () => {
   const imageList = [
     {
-      url: "https://images.freeimages.com/images/large-previews/415/brotherhood-at-sunset-1-1244631.jpg",
+      url: carousel,
       text: "image1",
     },
     {
