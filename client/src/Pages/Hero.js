@@ -61,15 +61,15 @@ const Hero = () => {
   }, [imageList]);
 
   return (
-    <div className="flex flex-col h-[1150px]] relative ">
+    <div className="flex flex-col relative mx-auto">
       {/* listing the images */}
-      <div className="w-[450px] h-[470px] ">
+      <div className=" flex w-[1200px] h-[470px] mx-auto mt-5">
         {imageList.map((image, index) => (
           <img
             key={index}
             src={image.url}
             alt="carousel"
-            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out object-contain ${
+            className={`absolute  transition-opacity duration-1000 ease-in-out object-cover h-[470px] w-[1200px] ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -115,7 +115,7 @@ const Hero = () => {
       </div>
 
       {/* /* dot buttons */}
-      <div className="w-full flex items-center justify-center gap-3 py-3 z-30">
+      <div className="absolute bottom-0 w-full flex items-center justify-center gap-3 py-3 z-30">
         {imageList.map((image, index) => {
           return (
             // TODO: onclick index to slide image
