@@ -1,4 +1,5 @@
-import { React, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { React, useState, useEffect } from "react";
 import carousel from "../Assets/carouselImage/1.jpg";
 
 const Hero = () => {
@@ -23,12 +24,11 @@ const Hero = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  //TODO: auto slides
   const handleNext = () => {
+    console.log(currentIndex);
     if (currentIndex < imageList.length - 1) {
       setCurrentIndex(currentIndex + 1);
-    }
-    if (currentIndex === imageList.length - 1) {
+    } else {
       setCurrentIndex(0);
     }
   };
@@ -41,32 +41,39 @@ const Hero = () => {
     }
   };
 
-  return (
-    <div className=" m-auto relative ">
-      {/* listing the images */} 
-      <div className="flex items-center justify-center relative ">
-        {imageList.length > 0 &&
-          imageList.map((image, index) => {
-            return (
-              <div
-                key={index}
-                className={` relative ${
-                  currentIndex === index ? "block" : "hidden"
-                } h-[450px] w-[1200px] `}
-              >
-                {/* TODO: scroll smooth or slides */}
-                <img
-                  src={image.url}
-                  alt={index}
-                  className="w-full h-full object-cover "
-                />
+  //TODO: auto slides
+  useEffect(() => {
+    const id = setInterval(() => {
+      // setCurrentIndex((prevIndex) => {
+      //   if (prevIndex < imageList.length - 1) {
+      //     return prevIndex + 1;
+      //   } else {
+      //     return 0;
+      //   }
+      // });
+      // console.log(currentIndex);
+      handleNext();
+    }, 3000);
 
-                <p className="absolute bottom-12 z-10 text-white w-full text-center">
-                  {image.text} 
-                </p>
-              </div>
-            );
-          })}
+    return () => {
+      clearInterval(id);
+    };
+  }, [imageList]);
+
+  return (
+    <div className="flex flex-col h-[1150px]] relative ">
+      {/* listing the images */}
+      <div className="w-[450px] h-[470px] ">
+        {imageList.map((image, index) => (
+          <img
+            key={index}
+            src={image.url}
+            alt="carousel"
+            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out object-contain ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
       </div>
       {/* next and prev button */}
       <div className="absolute top-1/2 w-full flex items-center justify-between px-5">
@@ -106,15 +113,16 @@ const Hero = () => {
           </svg>
         </button>
       </div>
+
       {/* /* dot buttons */}
-      <div className="w-full flex items-center justify-center gap-3 py-3">
+      <div className="w-full flex items-center justify-center gap-3 py-3 z-30">
         {imageList.map((image, index) => {
           return (
             // TODO: onclick index to slide image
             <div
               key={index}
               className={`w-3 h-3 rounded-full ${
-                currentIndex === index ? "bg-gray-700" : "bg-gray-300"
+                currentIndex === index ? "bg-gray-900" : "bg-gray-300"
               }`}
             ></div>
           );
