@@ -6,7 +6,7 @@ const Nav = () => {
     <>
       <nav className="bg-background-color">
         <p className="text-white bg-up-nav-color mx-auto text-center italic">
-          The fear of the Lord is the beginning of Wisdom and knowledge
+          Excellence with Integrity
         </p>
         {/* //TODO: slide smooth in image */}
         <div className="max-w-screen-xl text-white flex flex-wrap items-center justify-between mx-auto p-4 ">

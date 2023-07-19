@@ -1,33 +1,37 @@
-import { React, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { React, useState, useEffect } from "react";
+import student from "../Assets/carouselImage/students.jpg";
+import chemistryLab from "../Assets/carouselImage/chemistryLab.jpg";
+import chemistryLab1 from "../Assets/carouselImage/chemistryLab1.jpg";
+import laboratory from "../Assets/carouselImage/laboratory.jpg";
 
 const Hero = () => {
   const imageList = [
     {
-      url: "https://images.freeimages.com/images/large-previews/415/brotherhood-at-sunset-1-1244631.jpg",
-      text: "image1",
+      url: student,
+      text: "School Students",
     },
     {
-      url: "https://media.istockphoto.com/id/631181466/photo/silhouette.jpg?s=1024x1024&w=is&k=20&c=BTQ0q8ZH5i3EysKoRS_f44IVTDOj2cHplBF-uZ8Ny2k=",
-      text: "image2",
+      url: chemistryLab,
+      text: "Chemistry Lab",
     },
     {
-      url: "https://media.istockphoto.com/id/497992227/photo/silhouette-of-two-children-running.jpg?s=1024x1024&w=is&k=20&c=Q0coHo9FzDrdfKjRfTv1Gu0mrsHVom26jYQkCJkjl_Q=",
-      text: "image3",
+      url: laboratory,
+      text: "Laboratory",
     },
     {
-      url: "https://media.istockphoto.com/id/497992227/photo/silhouette-of-two-children-running.jpg?s=1024x1024&w=is&k=20&c=Q0coHo9FzDrdfKjRfTv1Gu0mrsHVom26jYQkCJkjl_Q=",
-      text: "image3",
+      url: chemistryLab1,
+      text: "chemistry lab 2",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  //TODO: auto slides
   const handleNext = () => {
+    console.log(currentIndex);
     if (currentIndex < imageList.length - 1) {
       setCurrentIndex(currentIndex + 1);
-    }
-    if (currentIndex === imageList.length - 1) {
+    } else {
       setCurrentIndex(0);
     }
   };
@@ -40,32 +44,39 @@ const Hero = () => {
     }
   };
 
-  return (
-    <div className=" m-auto relative ">
-      {/* listing the images */} 
-      <div className="flex items-center justify-center relative ">
-        {imageList.length > 0 &&
-          imageList.map((image, index) => {
-            return (
-              <div
-                key={index}
-                className={` relative ${
-                  currentIndex === index ? "block" : "hidden"
-                } h-[450px] w-[1200px] `}
-              >
-                {/* TODO: scroll smooth or slides */}
-                <img
-                  src={image.url}
-                  alt={index}
-                  className="w-full h-full object-cover "
-                />
+  useEffect(() => {
+    const id = setInterval(() => {
+      // setCurrentIndex((prevIndex) => {
+      //   if (prevIndex < imageList.length - 1) {
+      //     return prevIndex + 1;
+      //   } else {
+      //     return 0;
+      //   }
+      // });
+      // console.log(currentIndex);
+      handleNext();
+    }, 3000);
 
-                <p className="absolute bottom-12 z-10 text-white w-full text-center">
-                  {image.text} 
-                </p>
-              </div>
-            );
-          })}
+    return () => {
+      clearInterval(id);
+    };
+  }, [imageList]);
+  // TODO: background effect
+  return (
+    <div className="flex flex-col relative mx-auto sm:overflow-hidden">
+      {/* listing the images */}
+      <div className=" flex  md:w-[1200px] lg:w-[1200px] h-[470px] mx-auto mt-5  overflow-hidden">
+        {/* // TODO: fix the responsive design */}
+        {imageList.map((image, index) => (
+          <img
+            key={index}
+            src={image.url}
+            alt="carousel"
+            className={`left-0 md:left-6 lg:left-10  absolute  transition-opacity duration-1000 ease-in-out object-cover md:w-[1200px] lg:w-[1200px] h-[470px]   ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
       </div>
       {/* next and prev button */}
       <div className="absolute top-1/2 w-full flex items-center justify-between px-5">
@@ -105,15 +116,16 @@ const Hero = () => {
           </svg>
         </button>
       </div>
+
       {/* /* dot buttons */}
-      <div className="w-full flex items-center justify-center gap-3 py-3">
+      <div className="absolute bottom-0 w-full flex items-center justify-center gap-3 py-3 z-30">
         {imageList.map((image, index) => {
           return (
             // TODO: onclick index to slide image
             <div
               key={index}
               className={`w-3 h-3 rounded-full ${
-                currentIndex === index ? "bg-gray-700" : "bg-gray-300"
+                currentIndex === index ? "bg-gray-900" : "bg-gray-300"
               }`}
             ></div>
           );
