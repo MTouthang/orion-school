@@ -15,22 +15,22 @@ const Extras = () => {
             possimus praesentium soluta porro.
           </p>
         </div>
-        <div className="flex item justify-between  ">
-          <div className="w-1/4 bg-gray-300 h-64 relative ">
+        <div className="flex item justify-between flex-col md:flex-row lg:flex-row  ">
+          <div className="lg:w-1/4 bg-gray-300 h-64 relative mb-5  ">
             <div className=" bg-gray-100 bg-opacity-25 px-8 py-5 overflow-hidden w-full text-center absolute bottom-0">
               <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                 Sports
               </h1>
             </div>
           </div>
-          <div className="w-1/4 bg-gray-300 h-64 relative ">
+          <div className="lg:w-1/4 bg-gray-300 h-64 relative mb-5 ">
             <div className=" bg-gray-100 bg-opacity-25 px-8 py-5 overflow-hidden w-full text-center absolute bottom-0">
               <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                 Festivals
               </h1>
             </div>
           </div>
-          <div className="w-1/4 bg-gray-300 h-64 relative ">
+          <div className="lg:w-1/4 bg-gray-300 h-64 relative mb-5 ">
             <div className=" bg-gray-100 bg-opacity-25 px-8 py-5 overflow-hidden w-full text-center absolute bottom-0">
               <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                 Tour
