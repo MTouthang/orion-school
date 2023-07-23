@@ -63,16 +63,19 @@ const Hero = () => {
   }, [imageList]);
   // TODO: background effect
   return (
-    <div className="flex flex-col relative mx-auto sm:overflow-hidden">
+    <div
+      className="flex flex-col relative mx-auto sm:overflow-hidden border-2"
+      id="hero"
+    >
       {/* listing the images */}
-      <div className=" flex  md:w-[1200px] lg:w-[1200px] h-[470px] mx-auto mt-5  overflow-hidden">
+      <div className=" flex   h-[570px] mx-auto   w-full  overflow-hidden">
         {/* // TODO: fix the responsive design */}
         {imageList.map((image, index) => (
           <img
             key={index}
             src={image.url}
             alt="carousel"
-            className={`left-0 md:left-6 lg:left-10  absolute  transition-opacity duration-1000 ease-in-out object-cover md:w-[1200px] lg:w-[1200px] h-[470px]   ${
+            className={`  absolute  transition-opacity duration-1000 ease-in-out object-cover w-full h-[570px]   ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           />
