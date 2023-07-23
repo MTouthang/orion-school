@@ -4,30 +4,29 @@ import React from "react";
 const Courses = () => {
   return (
     <>
-      <section className="text-gray-600 body-font">
+      <section className="text-gray-600 body-font" id="courses">
         <div className="container px-5 mt-10 mx-auto">
           <div className="flex flex-col text-center w-full mb-10">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
               Offer Courses
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-              repellendus eius adipisci quod unde? Reprehenderit, doloribus
-              voluptatem illum non amet, rem quia adipisci qui fugit repellendus
-              possimus praesentium soluta porro.
+              The Academy is affiliated to the Council of Higher Secondary
+              Education Manipur (COHSEM) Manipur , and offers courses for Class
+              XI in Science and Arts
             </p>
           </div>
           <div className="flex item justify-around mb-10 flex-col md:flex-row lg:flex-row ">
-            <div className="lg:w-1/3 mb-2 bg-gray-300 h-96 relative">
-              <div className=" bg-gray-100 bg-opacity-25 px-8 py-5 overflow-hidden text-left absolute bottom-0">
+            <div className="lg:w-1/3 mb-2 bg-gray-300 h-96 relative  bg-course-art bg-[660px] bg-cover ">
+              <div className=" bg-gray-100 bg-opacity-50 px-8 py-5 overflow-hidden text-left absolute bottom-0">
                 <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   Art
                 </h1>
-                <p className="leading-relaxed mb-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem, facilis?
+                <p className="leading-relaxed mb-3 text-slate-700 ">
+                  Embark on an enlightening journey through higher secondary
+                  education in the Arts stream,
                 </p>
-                <a className="text-indigo-500 inline-flex items-center">
+                <a className="text-indigo-500 inline-flex items-center cursor-pointer hover:text-indigo-600">
                   Learn More
                   <svg
                     className="w-4 h-4 ml-2"
@@ -44,16 +43,16 @@ const Courses = () => {
                 </a>
               </div>
             </div>
-            <div className="lg:w-1/3 mt-2  bg-gray-300 h-96 relative">
-              <div className=" bg-gray-100 bg-opacity-25 px-8 py-5 overflow-hidden text-left absolute bottom-0">
+            <div className="lg:w-1/3 mt-2  bg-gray-300 h-96 bg-course-science bg-cover bg-[660px] relative">
+              <div className=" bg-gray-100 bg-opacity-50 px-8 py-5 overflow-hidden text-left absolute bottom-0">
                 <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   Science
                 </h1>
-                <p className="leading-relaxed mb-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quidem, facilis?
+                <p className="leading-relaxed mb-3 text-slate-700">
+                  Embark on a fascinating journey through higher secondary
+                  education in the Science stream
                 </p>
-                <a className="text-indigo-500 inline-flex items-center">
+                <a className="text-indigo-500 inline-flex items-center cursor-pointer hover:text-indigo-600">
                   Learn More
                   <svg
                     className="w-4 h-4 ml-2"

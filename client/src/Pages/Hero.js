@@ -63,7 +63,10 @@ const Hero = () => {
   }, [imageList]);
   // TODO: background effect
   return (
-    <div className="flex flex-col relative mx-auto sm:overflow-hidden border-2">
+    <div
+      className="flex flex-col relative mx-auto sm:overflow-hidden border-2"
+      id="hero"
+    >
       {/* listing the images */}
       <div className=" flex   h-[570px] mx-auto   w-full  overflow-hidden">
         {/* // TODO: fix the responsive design */}

@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <section className="flex py-20 justify-around  bg-slate-100">
+      <section className="flex py-20 justify-around  bg-slate-100" id="contact">
         <div className="w-96">
           <iframe
             width="100%"
