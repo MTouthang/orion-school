@@ -6,14 +6,14 @@ const Nav = () => {
     <>
       <nav className="bg-background-color">
         <p className="text-white bg-up-nav-color mx-auto text-center italic">
-          Excellence with Integrity
+          Motto: Excellence with Integrity
         </p>
         {/* //TODO: slide smooth in image */}
         <div className="max-w-screen-xl text-white flex flex-wrap items-center justify-between mx-auto p-4 ">
           <a href="/" className="flex items-center">
             <img
               src={logo}
-              className="h-12 mr-3"
+              className="h-16 mr-3"
               alt="Orion School of Arts and Science"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white mb-5">
