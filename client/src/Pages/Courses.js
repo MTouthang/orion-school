@@ -17,7 +17,7 @@ const Courses = () => {
             </p>
           </div>
           <div className="flex item justify-around mb-10 flex-col md:flex-row lg:flex-row ">
-            <div className="lg:w-1/3 mb-2 bg-gray-300 h-96 relative  bg-course-art bg-[660px] bg-cover ">
+            <div className="md:w-1/3  mb-2 bg-gray-300 h-96 relative  bg-course-art bg-[660px] bg-cover ">
               <div className=" bg-gray-100 bg-opacity-50 px-8 py-5 overflow-hidden text-left absolute bottom-0">
                 <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   Art
@@ -43,7 +43,7 @@ const Courses = () => {
                 </a>
               </div>
             </div>
-            <div className="lg:w-1/3 mt-2  bg-gray-300 h-96 bg-course-science bg-cover bg-[660px] relative">
+            <div className="md:w-1/3 mt-2  bg-gray-300 h-96 bg-course-science bg-cover bg-[660px] relative">
               <div className=" bg-gray-100 bg-opacity-50 px-8 py-5 overflow-hidden text-left absolute bottom-0">
                 <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
                   Science

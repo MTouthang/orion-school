@@ -16,17 +16,17 @@ const About = () => {
             <div className="h-48 w-48 overflow-hidden shadow-2xl">
               <img
                 alt="content"
-                className="object-cover object-center border-1 "
+                className="object-cover object-center border-2 "
                 src={principal}
                 // src="https://dummyimage.com/320x320"
               />
             </div>
-            <h2 className="text-xl font-medium title-font text-gray-900 mt-5">
+            <h2 className="text-xl font-medium title-font text-gray-900 mt-5 ">
               Principal
             </h2>
             <p className="text-base leading-relaxed">Jangminthang Lhungdim</p>
           </div>
-          <div className="pl-10 text-justify py-5">
+          <div className="md:pl-10 text-justify py-5">
             <p className="mb-8 leading-relaxed">
               The Orion Academy is an institution with true aim of creating
               future success in the society. Value based knowledge is the true
