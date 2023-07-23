@@ -84,7 +84,7 @@ const Hero = () => {
       <div className="absolute top-1/2 w-full flex items-center justify-between px-5">
         <button className=" px-5 " onClick={handlePrev}>
           <svg
-            class="w-4 h-4 text-white dark:text-gray-800"
+            className="w-4 h-4 text-white dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -92,9 +92,9 @@ const Hero = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M5 1 1 5l4 4"
             />
           </svg>
@@ -102,7 +102,7 @@ const Hero = () => {
 
         <button className="px-5" onClick={handleNext}>
           <svg
-            class="w-4 h-4 text-white dark:text-gray-800"
+            className="w-4 h-4 text-white dark:text-gray-800"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -110,9 +110,9 @@ const Hero = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="m1 9 4-4-4-4"
             />
           </svg>

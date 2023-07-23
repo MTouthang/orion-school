@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   return (
@@ -27,7 +28,7 @@ const Courses = () => {
                   education in the Arts stream,
                 </p>
                 <a className="text-indigo-500 inline-flex items-center cursor-pointer hover:text-indigo-600">
-                  Learn More
+                  <Link to={"/arts"}> Learn More</Link>
                   <svg
                     className="w-4 h-4 ml-2"
                     viewBox="0 0 24 24"
@@ -53,7 +54,8 @@ const Courses = () => {
                   education in the Science stream
                 </p>
                 <a className="text-indigo-500 inline-flex items-center cursor-pointer hover:text-indigo-600">
-                  Learn More
+                  <Link to={"/science"}> Learn More</Link>
+
                   <svg
                     className="w-4 h-4 ml-2"
                     viewBox="0 0 24 24"

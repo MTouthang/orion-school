@@ -11,15 +11,10 @@ const Footer = () => {
           <iframe
             width="100%"
             height="100%"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
             title="map"
-            scrolling="no"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.594987416864!2d93.69909872430198!3d24.360597078258934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374eb3a01ca079e1%3A0x5883788dd40e5!2sTuibuang%20Community%20Hall!5e0!3m2!1sen!2sin!4v1689537744464!5m2!1sen!2sin"
-            allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
 

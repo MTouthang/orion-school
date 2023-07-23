@@ -12,7 +12,7 @@ const About = () => {
           About
         </h2>
         <div className="container mx-auto flex px-5 md:flex-row flex-col items-center">
-          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+          <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
             <div className="h-48 w-48 overflow-hidden shadow-2xl">
               <img
                 alt="content"
