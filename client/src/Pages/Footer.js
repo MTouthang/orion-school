@@ -45,8 +45,8 @@ const Footer = () => {
               />
             </svg>
             <p className="mx-5">
-              M songgel, Tuiburong <br />
-              Lamka district
+              Tuibuong traffic point <br />
+              Near Cowboy Cafe
             </p>
           </div>
           <div className="flex mb-5">
