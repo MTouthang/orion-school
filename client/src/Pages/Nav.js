@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../Assets/icons/logo.png";
 
 const Nav = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen(!isOpen);
+  };
+
   return (
     <>
-      <nav className="bg-background-color">
+      <nav className="bg-background-color sticky top-0 z-50 " id="home">
         <p className="text-white bg-up-nav-color mx-auto text-center italic">
           Motto: Excellence with Integrity
         </p>
-        {/* //TODO: slide smooth in image */}
+
         <div className="max-w-screen-xl text-white flex flex-wrap items-center justify-between mx-auto p-4 ">
           <a href="/" className="flex items-center">
             <img
@@ -30,6 +36,7 @@ const Nav = () => {
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-default"
             aria-expanded="false"
+            onClick={toggleMenu}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -48,51 +55,55 @@ const Nav = () => {
               />
             </svg>
           </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
-              <li>
-                <a
-                  href="/"
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0  md:dark:text-blue-500"
-                  aria-current="page"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#courses"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Courses
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#facilities"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Facilities
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+          {isOpen ? (
+            <div className=" w-full md:block md:w-auto" id="navbar-default">
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
+                <li>
+                  <a
+                    href="/"
+                    className="block py-2 pl-3 pr-4 text-white focus:bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0  md:dark:text-blue-500"
+                    aria-current="page"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#courses"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >
+                    Courses
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#facilities"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >
+                    Facilities
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </nav>
     </>

@@ -28,7 +28,6 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    console.log(currentIndex);
     if (currentIndex < imageList.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
