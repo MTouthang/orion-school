@@ -8,6 +8,7 @@ const Science = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <section className="text-gray-600 body-font">

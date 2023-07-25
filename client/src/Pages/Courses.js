@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 const Courses = () => {
   return (
     <>
-      <section className="text-gray-600 body-font" id="courses">
+      <section
+        className="text-gray-600 body-font border-2 reveal--animate"
+        id="courses"
+      >
         <div className="container px-5 mt-10 mx-auto">
           <div className="flex flex-col text-center w-full mb-10">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
