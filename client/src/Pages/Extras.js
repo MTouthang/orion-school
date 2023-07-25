@@ -3,10 +3,7 @@ import React from "react";
 const Extras = () => {
   return (
     <>
-      <section
-        className="my-12 border-2 w-full px-2 reveal--animate"
-        id="extras"
-      >
+      <section className="my-12 w-full px-2 reveal--animate" id="extras">
         <div className="flex flex-col w-full py-5 ">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
             Recreational Events

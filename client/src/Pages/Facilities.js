@@ -3,10 +3,7 @@ import React from "react";
 const Facilities = () => {
   return (
     <>
-      <section
-        className="my-10 border-2 w-full px-2 reveal--animate"
-        id="facilities"
-      >
+      <section className="my-10  w-full px-2 reveal--animate" id="facilities">
         <div className="flex flex-col w-full py-5 ">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
             Facilities
