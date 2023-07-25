@@ -1,4 +1,5 @@
 import Layout from "./Layout/Layout";
+
 import { Routes, Route } from "react-router-dom";
 import Science from "./Pages/Science";
 import Art from "./Pages/Art";

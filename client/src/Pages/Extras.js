@@ -3,7 +3,7 @@ import React from "react";
 const Extras = () => {
   return (
     <>
-      <section className="mx-5 md:mx-24 py-10" id="extras">
+      <section className="my-12 w-full px-2 reveal--animate" id="extras">
         <div className="flex flex-col w-full py-5 ">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
             Recreational Events

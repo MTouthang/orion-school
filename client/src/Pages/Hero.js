@@ -60,6 +60,7 @@ const Hero = () => {
       clearInterval(id);
     };
   }, [imageList]);
+
   // TODO: background effect
   return (
     <div

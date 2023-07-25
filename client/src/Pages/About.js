@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <section
-        className="text-gray-600 body-font w-5/6 mx-auto py-10"
+        className="text-gray-600 body-font mx-auto py-10  my-14 w-full reveal--animate"
         id="about"
       >
         <h2 className="title-font  text-center sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
@@ -18,7 +18,6 @@ const About = () => {
                 alt="content"
                 className="object-cover object-center border-2 "
                 src={principal}
-                // src="https://dummyimage.com/320x320"
               />
             </div>
             <h2 className="text-xl font-medium title-font text-gray-900 mt-5 ">
@@ -26,7 +25,7 @@ const About = () => {
             </h2>
             <p className="text-base leading-relaxed">Jangminthang Lhungdim</p>
           </div>
-          <div className="md:pl-10 text-justify py-5">
+          <div className="md:pl-10 text-justify ">
             <p className="mb-8 leading-relaxed">
               The Orion Academy is an institution with true aim of creating
               future success in the society. Value based knowledge is the true
