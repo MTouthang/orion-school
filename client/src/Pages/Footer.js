@@ -92,7 +92,7 @@ const Footer = () => {
       </section>
       <section className="bg-up-nav-color text-white">
         <p className="text-center">
-          copyright &copy; 2023 Orion School of Arts and Science
+          copyright &copy; 2023 Orion Academy of Arts and Science
         </p>
       </section>
     </>
