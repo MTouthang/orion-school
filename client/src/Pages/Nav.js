@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import logo from "../Assets/icons/logo.png";
 
-const Nav = () => {
+const Nav = ({ artUrl, scienceUrl }) => {
   const [isOpen, setOpen] = useState(false);
 
   const toggleMenu = () => {
     console.log(isOpen);
     setOpen(!isOpen);
   };
+
+  artUrl?.pathname || scienceUrl?.pathname
+    ? console.log("hidded")
+    : console.log("shown");
 
   return (
     <>
@@ -71,30 +75,36 @@ const Nav = () => {
                   Home
                 </a>
               </li>
-              <li>
-                <a
-                  href="#about"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#courses"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Courses
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#facilities"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Facilities
-                </a>
-              </li>
+              {artUrl?.pathname || scienceUrl?.pathname ? (
+                " "
+              ) : (
+                <>
+                  <li>
+                    <a
+                      href="#about"
+                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#courses"
+                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >
+                      Courses
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#facilities"
+                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    >
+                      Facilities
+                    </a>
+                  </li>
+                </>
+              )}
               <li>
                 <a
                   href="#contact"
