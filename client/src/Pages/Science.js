@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { React, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import principal from "../Assets/Principal.jpg";
 import science from "../Assets/carouselImage/laboratory.jpg";
 import sennu from "../Assets/profiles/sennu.jpg";
@@ -12,8 +12,14 @@ import lenpu from "../Assets/profiles/lenpu.jpg";
 import muanguite from "../Assets/profiles/muanguite.jpg";
 import boilen from "../Assets/profiles/boilen.jpg";
 import minlen from "../Assets/profiles/minlen.jpg";
+import denish from "../Assets/profiles/denishJohn.jpg";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 const Science = () => {
+  // get current location
+  const scienceUrl = useLocation();
+
   const deptBiology = [
     {
       name: "Jangminthang Lhungdim",
@@ -84,16 +90,47 @@ const Science = () => {
       subject: "Mathematics",
       avatar: minlen,
     },
+    {
+      name: "L.Denish John",
+      education: "B.sc",
+      subject: "Mathematics",
+      avatar: denish,
+    },
   ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const revealElements = document.querySelectorAll(".reveal--animate");
+    const revealHandler = () => {
+      const windowHeight = window.innerHeight;
+      const revealPoint = 150;
+
+      revealElements.forEach((element) => {
+        const revealTop = element.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - revealPoint) {
+          element.classList.add("reveal");
+        } else {
+          element.classList.remove("reveal");
+        }
+      });
+    };
+
+    // adding the event listener
+    window.addEventListener("scroll", revealHandler);
+
+    // removing the event listener
+    return () => {
+      window.removeEventListener("scroll", revealHandler);
+    };
   }, []);
 
   return (
     <>
-      <section className="text-gray-600 body-font">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <Nav scienceUrl={scienceUrl} />
+      <section className="text-gray-600 body-font py-5">
+        <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
               Science Stream
@@ -137,7 +174,7 @@ const Science = () => {
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
             <img
-              className="object-cover object-center rounded w-[720px] h-[600px]"
+              className="object-cover object-center rounded w-[620px] h-[450px]"
               alt="hero"
               src={science}
             />
@@ -146,7 +183,7 @@ const Science = () => {
       </section>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-20">
+          <div className="flex flex-col text-center w-full mb-20 reveal--animate">
             <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">
               OUR SCIENCE FACULTY
             </h1>
@@ -160,12 +197,12 @@ const Science = () => {
             </p>
           </div>
 
-          <section className="profiles__bio">
+          <section className="profiles__bio reveal--animate">
             <h3 className="text-xl font-medium title-font text-center text-gray-900 tracking-widest">
               DEPARTMENT OF BIOLOGY
             </h3>
             <hr className="mb-5" />
-            <div className="flex flex-wrap ">
+            <div className="flex flex-wrap reveal--animate">
               {deptBiology.map((item) => (
                 <div className="p-4 lg:w-1/2 mx-auto border-2 rounded-md m-1">
                   <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
@@ -228,7 +265,7 @@ const Science = () => {
             </div>
           </section>
 
-          <section className="mt-10 profiles__physics">
+          <section className="mt-10 profiles__physics reveal--animate">
             <h3 className="text-xl font-medium title-font text-center text-gray-900 tracking-widest">
               DEPARTMENT OF PHYSICS
             </h3>
@@ -296,7 +333,7 @@ const Science = () => {
             </div>
           </section>
 
-          <section className="mt-10 profiles__chemistry">
+          <section className="mt-10 profiles__chemistry reveal--animate">
             <h3 className="text-xl font-medium title-font text-center text-gray-900 tracking-widest">
               DEPARTMENT OF CHEMISTRY
             </h3>
@@ -364,7 +401,7 @@ const Science = () => {
             </div>
           </section>
 
-          <section className="mt-10 profiles__maths">
+          <section className="mt-10 profiles__maths reveal--animate">
             <h3 className="text-xl font-medium title-font text-center text-gray-900 tracking-widest">
               DEPARTMENT OF MATHEMATICS
             </h3>
@@ -433,6 +470,7 @@ const Science = () => {
           </section>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

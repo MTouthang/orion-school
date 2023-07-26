@@ -66,7 +66,7 @@ const Footer = () => {
               />
             </svg>
 
-            <p className="mx-5"> Tuibuong, Lamka</p>
+            <p className="mx-5"> 456887985</p>
           </div>
           <div className="flex">
             <svg
