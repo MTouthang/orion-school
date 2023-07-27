@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import logo from "../Assets/icons/logo.png";
+import { Link } from "react-router-dom";
 
-const Nav = ({ artUrl, scienceUrl }) => {
+const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
   const [isOpen, setOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -9,8 +11,8 @@ const Nav = ({ artUrl, scienceUrl }) => {
     setOpen(!isOpen);
   };
 
-  artUrl?.pathname || scienceUrl?.pathname
-    ? console.log("hidded")
+  artUrl?.pathname || scienceUrl?.pathname || feedbackUrl?.pathname
+    ? console.log("hidden")
     : console.log("shown");
 
   return (
@@ -75,7 +77,9 @@ const Nav = ({ artUrl, scienceUrl }) => {
                   Home
                 </a>
               </li>
-              {artUrl?.pathname || scienceUrl?.pathname ? (
+              {artUrl?.pathname ||
+              scienceUrl?.pathname ||
+              feedbackUrl?.pathname ? (
                 " "
               ) : (
                 <>
@@ -111,6 +115,11 @@ const Nav = ({ artUrl, scienceUrl }) => {
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Contact
+                </a>
+              </li>
+              <li>
+                <a className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                  <Link to={"/feedback"}>Feedback </Link>
                 </a>
               </li>
             </ul>

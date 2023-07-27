@@ -10,6 +10,7 @@ import nehcha from "../Assets/profiles/nehcha.jpg";
 import denish from "../Assets/profiles/denish.jpg";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 
 const Art = () => {
   // get current location and some item of nav bar
@@ -77,6 +78,10 @@ const Art = () => {
 
   return (
     <>
+      <Helmet>
+        <title> Arts Stream </title>
+        <meta name="description" content="Orion school of Arts" />
+      </Helmet>
       <Nav artUrl={artUrl} />
       <section className="text-gray-600 body-font py-5">
         <div className="container mx-auto flex px-5 md:flex-row flex-col items-center">
@@ -113,7 +118,7 @@ const Art = () => {
             </div>
 
             <div className="flex justify-center">
-              <button className="inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+              <button className="inline-flex text-white bg-background-color border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg">
                 <Link to="/admission">Admission</Link>
               </button>
             </div>

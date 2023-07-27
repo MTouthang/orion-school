@@ -15,6 +15,7 @@ import minlen from "../Assets/profiles/minlen.jpg";
 import denish from "../Assets/profiles/denishJohn.jpg";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 
 const Science = () => {
   // get current location
@@ -128,6 +129,10 @@ const Science = () => {
 
   return (
     <>
+      <Helmet>
+        <title> Science Stream </title>
+        <meta name="description" content="Orion school of science" />
+      </Helmet>
       <Nav scienceUrl={scienceUrl} />
       <section className="text-gray-600 body-font py-5">
         <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
@@ -167,7 +172,7 @@ const Science = () => {
               {/* <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
                 Admission
               </button> */}
-              <button class=" inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+              <button class=" inline-flex text-white bg-background-color border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg">
                 <Link to="/admission"> Admission </Link>
               </button>
             </div>
