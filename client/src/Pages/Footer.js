@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <>
       <section
-        className="flex py-10 lg:py-20 justify-around items-center bg-slate-100"
+        className="bg-background-color flex py-10 lg:py-8 justify-around items-center"
         id="contact"
       >
         <div className="w-32 h-32  lg:h-60 md:w-96 lg:w-96 ">
@@ -18,8 +18,8 @@ const Footer = () => {
           ></iframe>
         </div>
 
-        <div className="lg:py-10">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-8 text-gray-900">
+        <div className="lg:py-10 text-white">
+          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-8 text-white">
             Contact Us
           </h1>
           <div className="flex mb-5">
