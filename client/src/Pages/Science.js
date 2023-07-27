@@ -15,6 +15,7 @@ import minlen from "../Assets/profiles/minlen.jpg";
 import denish from "../Assets/profiles/denishJohn.jpg";
 import Nav from "./Nav";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 
 const Science = () => {
   // get current location
@@ -128,6 +129,10 @@ const Science = () => {
 
   return (
     <>
+      <Helmet>
+        <title> Science Stream </title>
+        <meta name="description" content="Orion school of science" />
+      </Helmet>
       <Nav scienceUrl={scienceUrl} />
       <section className="text-gray-600 body-font py-5">
         <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
