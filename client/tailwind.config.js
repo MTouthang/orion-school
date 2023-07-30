@@ -17,6 +17,10 @@ module.exports = {
         "recreational-festivals": "url('/src/Assets/culture.jpg')",
         "recreational-tours": "url('/src/Assets/Tour.jpg')",
       },
+      fontFamily: {
+        motoFont: ["Marck Script", "Pinyon Script"],
+        Academy: ["Playfair Display"],
+      },
     },
   },
 };
