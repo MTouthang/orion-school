@@ -8,7 +8,7 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
   const [isOpen, setOpen] = useState(false);
   const [navVisible, setIsNavBarVisible] = useState(true);
   let scrollTimeout;
-
+   
   useEffect(() => {
     const handleScroll = () => {
       setIsNavBarVisible(false); // Hide the nav bar on scroll
@@ -17,7 +17,7 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
       // Set a timeout to detect when the scrolling pauses
       scrollTimeout = setTimeout(() => {
         setIsNavBarVisible(true); // Show the nav bar on pause
-      }, 200); // Adjust the time (in milliseconds) for the desired pause duration
+      }, 800); // Adjust the time (in milliseconds) for the desired pause duration
     };
 
     // Add event listener for scroll when the component mounts
