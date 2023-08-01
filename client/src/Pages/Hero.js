@@ -45,14 +45,6 @@ const Hero = () => {
 
   useEffect(() => {
     const id = setInterval(() => {
-      // setCurrentIndex((prevIndex) => {
-      //   if (prevIndex < imageList.length - 1) {
-      //     return prevIndex + 1;
-      //   } else {
-      //     return 0;
-      //   }
-      // });
-      // console.log(currentIndex);
       handleNext();
     }, 3000);
 
