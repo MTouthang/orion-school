@@ -1,11 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import { React, useEffect } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { useLocation } from "react-router-dom";
 
 const Feedback = () => {
   const feedbackUrl = useLocation();
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   return (
     <>
@@ -22,7 +26,7 @@ const Feedback = () => {
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
-            <div className="flex flex-wrap -m-2">
+            <form className="flex flex-wrap -m-2 " netlify>
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label
@@ -76,7 +80,7 @@ const Feedback = () => {
                   Submit
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
