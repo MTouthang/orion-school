@@ -1,59 +1,28 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logo from "../Assets/icons/logo.png";
 import { Link } from "react-router-dom";
 
 const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
+  // Hamburger
   const [isOpen, setOpen] = useState(false);
-  const [navVisible, setIsNavBarVisible] = useState(true);
-  let scrollTimeout;
-   
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsNavBarVisible(false); // Hide the nav bar on scroll
-      clearTimeout(scrollTimeout);
-
-      // Set a timeout to detect when the scrolling pauses
-      scrollTimeout = setTimeout(() => {
-        setIsNavBarVisible(true); // Show the nav bar on pause
-      }, 800); // Adjust the time (in milliseconds) for the desired pause duration
-    };
-
-    // Add event listener for scroll when the component mounts
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      // Clear the timeout when unmounting to prevent potential memory leaks
-      clearTimeout(scrollTimeout);
-    };
-  }, []);
 
   const toggleMenu = () => {
     setOpen(!isOpen);
   };
   // TODO: fix extra space in the nav bar and add dynamic active menu bar
   // console.log("scroll y", window.scrollY == 0);
-
   return (
     <>
-      <nav
-        className={` bg-background-color sticky top-0 z-50  ${
-          navVisible
-            ? "transform translate-y-0  "
-            : "transform -translate-y-full"
-        } transition-opacity duration-300 ease-in-out transition-transform duration-300 ease-in-out `}
-        id=""
-      >
+      <nav className="bg-background-color sticky top-0 z-50">
         <div>
           <p className="text-white text-2xl bg-up-nav-color mx-auto text-center font-motoFont py-1">
             Motto : Excellence with Integrity
           </p>
         </div>
 
-        <div className="max-w-screen-xl text-white flex flex-wrap items-center justify-between mx-auto p-4  ">
+        <div className="max-w-screen-xl text-white flex flex-wrap items-center justify-between mx-auto px-2  ">
           <a href="/" className="flex items-center ">
             <img
               src={logo}
