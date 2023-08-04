@@ -26,7 +26,10 @@ const Feedback = () => {
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
-            <form className="flex flex-wrap -m-2 " netlify>
+            <form className="flex flex-wrap -m-2 " name="contact" method="post">
+              {/* netlify bot */}
+              <input type="hidden" name="form-name" value="contact" />
+
               <div className="p-2 w-1/2">
                 <div className="relative">
                   <label
