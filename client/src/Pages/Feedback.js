@@ -1,29 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { React, useEffect, useState } from "react";
+import { React, useEffect } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { useLocation } from "react-router-dom";
 
 const Feedback = () => {
   const feedbackUrl = useLocation();
-  // const [name, setName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [message, setMessage] = useState("");
-
-  // const handleForm = () => {
-  //   if (!name) {
-  //     alert("Name should be greater 5 but less than 10 characters");
-  //   }
-  //   if (!email) {
-  //     alert("Email should be provided! ");
-  //   }
-  //   if (!message) {
-  //     alert(
-  //       "Message should be and provide and must be greater than 100 characters and less than 200 characters"
-  //     );
-  //   }
-  //   return;
-  // };
 
   useEffect(() => {
     window.scroll(0, 0);
