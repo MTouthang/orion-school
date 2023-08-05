@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         motoFont: ["Marck Script", "Pinyon Script"],
         Academy: ["Playfair Display"],
+        poppins: ["Poppins"],
       },
     },
   },

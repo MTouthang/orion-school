@@ -1,11 +1,29 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { React, useEffect } from "react";
+import { React, useEffect, useState } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { useLocation } from "react-router-dom";
 
 const Feedback = () => {
   const feedbackUrl = useLocation();
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [message, setMessage] = useState("");
+
+  // const handleForm = () => {
+  //   if (!name) {
+  //     alert("Name should be greater 5 but less than 10 characters");
+  //   }
+  //   if (!email) {
+  //     alert("Email should be provided! ");
+  //   }
+  //   if (!message) {
+  //     alert(
+  //       "Message should be and provide and must be greater than 100 characters and less than 200 characters"
+  //     );
+  //   }
+  //   return;
+  // };
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -42,6 +60,9 @@ const Feedback = () => {
                     type="text"
                     id="name"
                     name="name"
+                    minLength="2"
+                    maxLength="15"
+                    required
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -58,6 +79,9 @@ const Feedback = () => {
                     type="email"
                     id="email"
                     name="email"
+                    required
+                    minLength="10"
+                    maxLength="30"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -73,13 +97,18 @@ const Feedback = () => {
                   <textarea
                     id="message"
                     name="message"
+                    minLength="50"
+                    required
+                    maxLength="250"
                     className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                    defaultValue={""}
                   />
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-background-color border-0 py-2 px-8 focus:outline-none hover:bg-blue-700 rounded text-lg">
+                <button
+                  // onClick={handleForm}
+                  className="flex mx-auto text-white bg-background-color border-0 py-2 px-8 focus:outline-none hover:bg-blue-700 rounded text-lg"
+                >
                   Submit
                 </button>
               </div>
