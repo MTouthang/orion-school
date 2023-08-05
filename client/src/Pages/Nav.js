@@ -1,18 +1,29 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../Assets/icons/logo.png";
 import { Link } from "react-router-dom";
 
 const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
   // Hamburger
   const [isOpen, setOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState("home");
 
   const toggleMenu = () => {
     setOpen(!isOpen);
   };
+  // active nav bar
+  const updateNav = () => {
+    feedbackUrl?.pathname ? setActiveItem("feedback") : "home";
+  };
+  useEffect(() => {
+    updateNav();
+  }, []);
+
   // TODO: fix extra space in the nav bar and add dynamic active menu bar
   // console.log("scroll y", window.scrollY == 0);
+
   return (
     <>
       <nav className="bg-background-color sticky top-0 z-50">
@@ -67,13 +78,15 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
             className={` ${
               isOpen ? "" : "hidden"
             }  w-full md:block md:w-auto font-Academy`}
-            id=""
           >
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
+            <ul className="font-poppins font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
               <li>
                 <a
                   href="/"
-                  className="block py-2 pl-3 pr-4 text-white focus:bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0  md:dark:text-blue-500"
+                  className={`${
+                    activeItem === "home" ? "text-blue-700" : ""
+                  } block py-2 pl-3 pr-4 text-white rounded md:bg-transparent  md:p-0 hover:text-blue-500 `}
+                  onClick={() => setActiveItem("home")}
                 >
                   Home
                 </a>
@@ -87,7 +100,12 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
                   <li>
                     <a
                       href="#about"
-                      className="block py-2 pl-3 pr-4 text-gray-900 rounded  hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                      onClick={() => setActiveItem("about")}
+                      className={`${
+                        activeItem === "about"
+                          ? "text-blue-700"
+                          : "dark:text-white"
+                      } block py-2 pl-3 pr-4  rounded   md:hover:bg-transparent md:border-0 md:p-0   md:dark:hover:bg-transparent hover:text-blue-500`}
                     >
                       About
                     </a>
@@ -95,15 +113,25 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
                   <li>
                     <a
                       href="#courses"
-                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                      onClick={() => setActiveItem("courses")}
+                      className={` ${
+                        activeItem === "courses"
+                          ? "text-blue-700"
+                          : "dark:text-white"
+                      } block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0  dark:hover:bg-gray-700  md:dark:hover:bg-transparent hover:text-blue-500`}
                     >
                       Courses
                     </a>
                   </li>
                   <li>
                     <a
+                      onClick={() => setActiveItem("facilities")}
                       href="#facilities"
-                      className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                      className={`${
+                        activeItem === "facilities"
+                          ? "text-blue-700"
+                          : "text-white"
+                      } block py-2 pl-3 pr-4 rounded  md:border-0 dark:text-whit md:p-0 dark:hover:bg-gray-700  md:dark:hover:bg-transparent hover:text-blue-500`}
                     >
                       Facilities
                     </a>
@@ -112,14 +140,22 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
               )}
               <li>
                 <a
+                  onClick={() => setActiveItem("contact")}
                   href="#contact"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className={`${
+                    activeItem === "contact" ? "text-blue-700" : "text-white"
+                  } block py-2 pl-3 pr-4 rounded  md:border-0 dark:text-whit md:p-0 dark:hover:bg-gray-700  md:dark:hover:bg-transparent hover:text-blue-500`}
                 >
                   Contact
                 </a>
               </li>
               <li>
-                <a className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                <a
+                  onClick={() => setActiveItem("feedback")}
+                  className={`${
+                    activeItem === "feedback" ? "text-blue-700" : "text-white"
+                  } block py-2 pl-3 pr-4 rounded  md:border-0 dark:text-whit md:p-0 dark:hover:bg-gray-700  md:dark:hover:bg-transparent hover:text-blue-500`}
+                >
                   <Link to={"/feedback"}>Feedback </Link>
                 </a>
               </li>

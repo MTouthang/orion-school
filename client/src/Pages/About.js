@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <section
-        className="text-gray-600 body-font mx-auto py-10  my-14 w-full reveal--animate"
+        className=" font-Academic text-gray-600 body-font mx-auto py-10  my-14 w-full reveal--animate"
         id="about"
       >
         <h2 className="title-font  text-center sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
