@@ -18,6 +18,7 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
     feedbackUrl?.pathname ? setActiveItem("feedback") : "home";
   };
   useEffect(() => {
+    setActiveItem("home");
     updateNav();
   }, []);
 
@@ -82,11 +83,11 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
             <ul className="font-poppins font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
               <li>
                 <a
+                  onClick={() => setActiveItem("home")}
                   href="/"
                   className={`${
-                    activeItem === "home" ? "text-blue-700" : ""
-                  } block py-2 pl-3 pr-4 text-white rounded md:bg-transparent  md:p-0 hover:text-blue-500 `}
-                  onClick={() => setActiveItem("home")}
+                    activeItem === "home" ? "text-blue-700" : "text-white"
+                  } block py-2 pl-3 pr-4  rounded md:bg-transparent  md:p-0 hover:text-blue-500 `}
                 >
                   Home
                 </a>
