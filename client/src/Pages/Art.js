@@ -8,6 +8,12 @@ import richard from "../Assets/profiles/richard.jpg";
 import mimin from "../Assets/profiles/mimin.jpg";
 import nehcha from "../Assets/profiles/nehcha.jpg";
 import denish from "../Assets/profiles/denish.jpg";
+import robertKhongsai from "../Assets/profiles/robertKhongsai.jpg";
+import haothang from "../Assets/profiles/haothangLupheng.jpg";
+import seiminthangBaite from "../Assets/profiles/seiminthangBaite.jpg";
+import letkhoseiMate from "../Assets/profiles/letkhoseiMate.jpg";
+import ginjakaiHaokip from "../Assets/profiles/ginjakaiHaokip.jpg";
+
 import Nav from "./Nav";
 import Footer from "./Footer";
 import { Helmet } from "react-helmet";
@@ -22,6 +28,12 @@ const Art = () => {
       subject: "English Literature",
       education: " M.A",
       avatar: richard,
+    },
+    {
+      name: "K.Robertson Khongsai",
+      subject: "Education",
+      education: "M.A",
+      avatar: robertKhongsai,
     },
     {
       name: "Robert Lalboi",
@@ -46,6 +58,30 @@ const Art = () => {
       subject: "History",
       education: "M.A",
       avatar: denish,
+    },
+    {
+      name: "S. Haothang Lupheng",
+      subject: "History",
+      education: "M.A",
+      avatar: haothang,
+    },
+    {
+      name: "Seiminthang Baite",
+      subject: "Geography",
+      education: "M.A",
+      avatar: seiminthangBaite,
+    },
+    {
+      name: "LetKhosei Baite",
+      subject: "Geography",
+      education: "B.A",
+      avatar: letkhoseiMate,
+    },
+    {
+      name: "Ginjakai Haokip",
+      subject: "Economatric",
+      education: "M.A",
+      avatar: ginjakaiHaokip,
     },
   ];
 

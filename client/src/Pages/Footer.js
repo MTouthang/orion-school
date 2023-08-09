@@ -92,8 +92,8 @@ const Footer = () => {
         </div>
       </section>
       <section className="bg-up-nav-color text-white">
-        <p className="text-center">
-          copyright &copy; 2023 Orion Academy of Arts and Science
+        <p className="text-center text-sm py-2">
+          Copyright &copy; 2023 <br /> Orion Academy of Arts and Science
         </p>
       </section>
     </>

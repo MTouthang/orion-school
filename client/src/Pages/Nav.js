@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../Assets/icons/logo.png";
 import { Link } from "react-router-dom";
 
@@ -13,14 +13,52 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
   const toggleMenu = () => {
     setOpen(!isOpen);
   };
-  // active nav bar
-  const updateNav = () => {
-    feedbackUrl?.pathname ? setActiveItem("feedback") : "home";
-  };
-  useEffect(() => {
-    setActiveItem("home");
-    updateNav();
-  }, []);
+  // active nav bar change status
+  // const updateNav = () => {
+  //   feedbackUrl?.pathname ? setActiveItem("feedback") : "home";
+  // };
+
+  //
+  // scroll to specific section yet to be implement
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const homeSection = document.getElementById("home");
+  //     const aboutSection = document.getElementById("about");
+  //     const contactSection = document.getElementById("contact");
+  //     const feedbackSection = document.getElementById("feedback");
+
+  //     const scrollPosition = window.scrollY;
+  //     console.log("scrollPosition", scrollPosition);
+  //     console.log("home section offsetTop:", homeSection.offsetTop);
+
+  //     if (
+  //       scrollPosition >= homeSection.offsetTop &&
+  //       scrollPosition < aboutSection.offsetTop
+  //     ) {
+  //       setActiveItem("home");
+  //     } else if (
+  //       scrollPosition >= aboutSection.offsetTop &&
+  //       scrollPosition < contactSection.offsetTop
+  //     ) {
+  //       setActiveItem("about");
+  //     } else if (
+  //       scrollPosition >= contactSection.offsetTop &&
+  //       scrollPosition < feedbackSection.offsetTop
+  //     ) {
+  //       setActiveItem("contact");
+  //     } else if (scrollPosition >= feedbackSection.offsetTop) {
+  //       setActiveItem("feedback");
+  //     }
+  //   };
+
+  //   setActiveItem("home");
+  //   updateNav();
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   // TODO: fix extra space in the nav bar and add dynamic active menu bar
   // console.log("scroll y", window.scrollY == 0);
