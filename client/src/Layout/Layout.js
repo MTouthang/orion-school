@@ -12,7 +12,7 @@ const Layout = () => {
     const revealElements = document.querySelectorAll(".reveal--animate");
     const revealHandler = () => {
       const windowHeight = window.innerHeight;
-      const revealPoint = 150;
+      const revealPoint = 100;
 
       revealElements.forEach((element) => {
         const revealTop = element.getBoundingClientRect().top;
