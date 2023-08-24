@@ -13,55 +13,6 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
   const toggleMenu = () => {
     setOpen(!isOpen);
   };
-  // active nav bar change status
-  // const updateNav = () => {
-  //   feedbackUrl?.pathname ? setActiveItem("feedback") : "home";
-  // };
-
-  //
-  // scroll to specific section yet to be implement
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const homeSection = document.getElementById("home");
-  //     const aboutSection = document.getElementById("about");
-  //     const contactSection = document.getElementById("contact");
-  //     const feedbackSection = document.getElementById("feedback");
-
-  //     const scrollPosition = window.scrollY;
-  //     console.log("scrollPosition", scrollPosition);
-  //     console.log("home section offsetTop:", homeSection.offsetTop);
-
-  //     if (
-  //       scrollPosition >= homeSection.offsetTop &&
-  //       scrollPosition < aboutSection.offsetTop
-  //     ) {
-  //       setActiveItem("home");
-  //     } else if (
-  //       scrollPosition >= aboutSection.offsetTop &&
-  //       scrollPosition < contactSection.offsetTop
-  //     ) {
-  //       setActiveItem("about");
-  //     } else if (
-  //       scrollPosition >= contactSection.offsetTop &&
-  //       scrollPosition < feedbackSection.offsetTop
-  //     ) {
-  //       setActiveItem("contact");
-  //     } else if (scrollPosition >= feedbackSection.offsetTop) {
-  //       setActiveItem("feedback");
-  //     }
-  //   };
-
-  //   setActiveItem("home");
-  //   updateNav();
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // TODO: fix extra space in the nav bar and add dynamic active menu bar
-  // console.log("scroll y", window.scrollY == 0);
 
   return (
     <>
@@ -125,7 +76,7 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
                   href="/"
                   className={`${
                     activeItem === "home" ? "text-blue-700" : "text-white"
-                  } block py-2 pl-3 pr-4  rounded md:bg-transparent  md:p-0 hover:text-blue-500 `}
+                  } block py-2 pl-3 pr-4  rounded md:bg-transparent  md:p-0 hover:text-blue-500 active`}
                 >
                   Home
                 </a>
@@ -144,7 +95,7 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
                         activeItem === "about"
                           ? "text-blue-700"
                           : "dark:text-white"
-                      } block py-2 pl-3 pr-4  rounded   md:hover:bg-transparent md:border-0 md:p-0   md:dark:hover:bg-transparent hover:text-blue-500`}
+                      } block py-2 pl-3 pr-4  rounded   md:hover:bg-transparent md:border-0 md:p-0   md:dark:hover:bg-transparent hover:text-blue-500 active`}
                     >
                       About
                     </a>

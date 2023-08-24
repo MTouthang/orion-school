@@ -19,8 +19,10 @@ const Layout = () => {
 
         if (revealTop < windowHeight - revealPoint) {
           element.classList.add("reveal");
+          element.classList.add("active");
         } else {
           element.classList.remove("reveal");
+          element.classList.remove("active");
         }
       });
     };
