@@ -9,12 +9,11 @@ const Footer = () => {
       >
         <div className="w-32 h-32  lg:h-60 md:w-96 lg:w-96 ">
           <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.745440437332!2d93.7038664!3d24.355358499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374eb35e11c4de01%3A0xdcb8e5c7df79549f!2sThe%20Orion%20Academy%20of%20Science%20and%20Arts!5e0!3m2!1sen!2sus!4v1692892966325!5m2!1sen!2sus"
             width="100%"
             height="100%"
-            title="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.594987416864!2d93.69909872430198!3d24.360597078258934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374eb3a01ca079e1%3A0x5883788dd40e5!2sTuibuang%20Community%20Hall!5e0!3m2!1sen!2sin!4v1689537744464!5m2!1sen!2sin"
+            title="The Orion Academy"
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
 
@@ -40,8 +39,8 @@ const Footer = () => {
               />
             </svg>
             <p className="mx-5">
-              Tuibuong traffic point <br />
-              Near Cowboy Cafe
+              The Orion Academy of Art and Science <br />
+              Tuibuang, Lamka
             </p>
           </div>
           <div className="flex mb-5">
@@ -66,7 +65,7 @@ const Footer = () => {
               />
             </svg>
 
-            <p className="mx-5"> 456887985</p>
+            <p className="mx-5"> +91 3874 357 503</p>
           </div>
           <div className="flex">
             <svg
@@ -87,7 +86,7 @@ const Footer = () => {
               />
             </svg>
 
-            <p className="mx-5">support@orion.com</p>
+            <p className="mx-5">theorionacademyedu@gmail.com</p>
           </div>
         </div>
       </section>
