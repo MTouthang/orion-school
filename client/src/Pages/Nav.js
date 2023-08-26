@@ -30,11 +30,11 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
               className="h-24 mr-3"
               alt="Orion Academy of Arts and Science"
             />
-            <span className="font-Academy  self-center text-3xl font-semibold whitespace-nowrap dark:text-white mb-5">
+            <span className="font-Academy  self-center md:text-2xl lg:text-3xl font-semibold whitespace-nowrap dark:text-white mb-5">
               Orion Academy
             </span>
             <br />
-            <span className="font-Academy text-lg absolute text-white mt-9 ml-[100px] mb-0">
+            <span className="font-Academy text-sm lg:text-lg absolute text-white mt-3 lg:mt-9 ml-[100px] mb-0">
               of Arts and Science
             </span>
           </a>
@@ -69,7 +69,7 @@ const Nav = ({ artUrl, scienceUrl, feedbackUrl }) => {
               isOpen ? "" : "hidden"
             }  w-full md:block md:w-auto font-Academy`}
           >
-            <ul className="font-poppins font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
+            <ul className="font-poppins font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-4 md:mt-0 md:border-0 dark:bg-background-color dark:border-gray-700">
               <li>
                 <a
                   onClick={() => setActiveItem("home")}

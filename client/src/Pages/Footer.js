@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <>
       <section
-        className="bg-background-color flex py-10 lg:py-8 justify-around items-center"
+        className="bg-background-color flex py-10 lg:py-8 sm:justify-start pl-5 md:justify-around items-center flex-wrap md:flex-nowrap md: "
         id="contact"
       >
-        <div className="w-32 h-32  lg:h-60 md:w-96 lg:w-96 ">
+        <div className="w-65 h-32  lg:h-60 md:w-60 lg:w-96 border-red-700 ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.745440437332!2d93.7038664!3d24.355358499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374eb35e11c4de01%3A0xdcb8e5c7df79549f!2sThe%20Orion%20Academy%20of%20Science%20and%20Arts!5e0!3m2!1sen!2sus!4v1692892966325!5m2!1sen!2sus"
             width="100%"
@@ -17,11 +17,11 @@ const Footer = () => {
           ></iframe>
         </div>
 
-        <div className="lg:py-10 text-white">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-8 text-white">
+        <div className="lg:py-10 text-white pt-8 md:pt-0">
+          <h1 className="sm:text-3xl  text-2xl font-medium title-font mb-2 md:mb-8 text-white">
             Contact Us
           </h1>
-          <div className="flex mb-5">
+          <div className="flex md:mb-5">
             <svg
               width="17"
               height="22"
@@ -43,7 +43,7 @@ const Footer = () => {
               Tuibuang, Lamka
             </p>
           </div>
-          <div className="flex mb-5">
+          <div className="flex mb-2 md:mb-5">
             <svg
               width="22"
               height="22"
@@ -90,6 +90,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
+
       <section className="bg-up-nav-color text-white">
         <p className="text-center text-sm py-2">
           Copyright &copy; 2023 <br /> Orion Academy of Arts and Science
