@@ -5,22 +5,23 @@ const About = () => {
     return (
         <>
             <section
-                className=" font-Academic body-font reveal--animate mx-auto my-14  w-full py-10 text-gray-600"
+                className="w-full py-10 mx-auto text-gray-600  font-Academic body-font reveal--animate my-14"
                 id="about"
             >
-                <h2 className="title-font  mb-4 text-center text-3xl font-medium text-gray-900 sm:text-4xl">
+                <h2 className="mb-4 text-3xl font-medium text-center text-gray-900 title-font sm:text-4xl">
                     About
                 </h2>
-                <div className="container mx-auto flex flex-col items-center px-5 md:flex-row">
-                    <div className="mb-6 p-4 sm:mb-0 md:w-1/3">
-                        <div className="h-48 w-48 overflow-hidden shadow-2xl">
+                <div className="container flex flex-col items-center px-5 mx-auto md:flex-row">
+                    <div className="p-4 mb-6 sm:mb-0 md:w-1/3">
+                        <div className="w-48 h-48 overflow-hidden shadow-2xl">
                             <img
                                 alt="content"
-                                className="border-2 object-cover object-center "
+                                className="object-cover object-center border-2 "
                                 src={principal}
+                                loading='lazy'
                             />
                         </div>
-                        <h2 className="title-font mt-5 text-xl font-medium text-gray-900 ">
+                        <h2 className="mt-5 text-xl font-medium text-gray-900 title-font ">
                             Principal
                         </h2>
                         <p className="text-base leading-relaxed">

@@ -56,7 +56,7 @@ const Hero = () => {
   // TODO: background effect
   return (
     <div
-      className="flex flex-col relative mx-auto sm:overflow-hidden border-2"
+      className="relative flex flex-col mx-auto border-2 sm:overflow-hidden"
       id="hero"
     >
       {/* listing the images */}
@@ -67,6 +67,7 @@ const Hero = () => {
             key={index}
             src={image.url}
             alt="carousel"
+            loading="lazy"
             className={`  absolute  transition-opacity duration-1000 ease-in-out object-cover w-full h-[570px]   ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
@@ -74,8 +75,8 @@ const Hero = () => {
         ))}
       </div>
       {/* next and prev button */}
-      <div className="absolute top-1/2 w-full flex items-center justify-between px-5">
-        <button className=" px-5 " onClick={handlePrev}>
+      <div className="absolute flex items-center justify-between w-full px-5 top-1/2">
+        <button className="px-5 " onClick={handlePrev}>
           <svg
             className="w-4 h-4 text-white dark:text-gray-800"
             aria-hidden="true"
@@ -113,7 +114,7 @@ const Hero = () => {
       </div>
 
       {/* /* dot buttons */}
-      <div className="absolute bottom-0 w-full flex items-center justify-center gap-3 py-3 z-30">
+      <div className="absolute bottom-0 z-30 flex items-center justify-center w-full gap-3 py-3">
         {imageList.map((image, index) => {
           return (
             // TODO: onclick index to slide image

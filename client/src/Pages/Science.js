@@ -134,10 +134,10 @@ const Science = () => {
         <meta name="description" content="Orion school of science" />
       </Helmet>
       <Nav scienceUrl={scienceUrl} />
-      <section className="text-gray-600 body-font py-5">
-        <div className="container mx-auto flex px-5  md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+      <section className="py-5 text-gray-600 body-font">
+        <div className="container flex flex-col items-center px-5 mx-auto md:flex-row">
+          <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
+            <h1 className="mb-4 text-3xl font-medium text-gray-900 title-font sm:text-4xl">
               Science Stream
             </h1>
             <p className="mb-8 leading-relaxed">
@@ -150,26 +150,26 @@ const Science = () => {
             </p>
 
             <div className="mb-5">
-              <span className="bg-slate-400 rounded-lg px-2 ">
+              <span className="px-2 rounded-lg bg-slate-400 ">
                 Dept of Physics
               </span>
-              <span className="bg-slate-400 rounded-lg px-2 m-2 ">
+              <span className="px-2 m-2 rounded-lg bg-slate-400 ">
                 Dept of Chemistry
               </span>
-              <span className="bg-slate-400 rounded-lg px-2 m-2 ">
+              <span className="px-2 m-2 rounded-lg bg-slate-400 ">
                 Dept of Biology
               </span>
               <br />
-              <span className="bg-slate-400 rounded-lg px-2  ">
+              <span className="px-2 rounded-lg bg-slate-400 ">
                 Dept of Mathematics
               </span>
-              <span className="bg-slate-400 rounded-lg px-2 m-2 ">
+              <span className="px-2 m-2 rounded-lg bg-slate-400 ">
                 Dept of Home Science
               </span>
             </div>
 
             <div className="flex justify-center">
-              {/* <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              {/* <button className="inline-flex px-6 py-2 text-lg text-white bg-indigo-500 border-0 rounded focus:outline-none hover:bg-indigo-600">
                 Admission
               </button> */}
               <button class=" inline-flex text-white bg-background-color border-0 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg">
@@ -177,22 +177,23 @@ const Science = () => {
               </button>
             </div>
           </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+          <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
             <img
               className="object-cover object-center rounded w-[620px] h-[450px]"
               alt="hero"
               src={science}
+              loading='lazy'
             />
           </div>
         </div>
       </section>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-20 reveal--animate">
-            <h1 className="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">
+          <div className="flex flex-col w-full mb-20 text-center reveal--animate">
+            <h1 className="mb-4 text-2xl font-medium tracking-widest text-gray-900 title-font">
               OUR SCIENCE FACULTY
             </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            <p className="mx-auto text-base leading-relaxed lg:w-2/3">
               Our Science Faculty is a dynamic and diverse team of educators
               dedicated to igniting the passion for science and nurturing the
               next generation of scientific minds. With a shared commitment to
@@ -203,24 +204,25 @@ const Science = () => {
           </div>
 
           <section className="profiles__bio reveal--animate">
-            <h3 className="text-xl font-medium title-font text-center text-gray-900 tracking-widest">
+            <h3 className="text-xl font-medium tracking-widest text-center text-gray-900 title-font">
               DEPARTMENT OF BIOLOGY
             </h3>
             <hr className="mb-5" />
             <div className="flex flex-wrap reveal--animate">
               {deptBiology.map((item) => (
-                <div className="p-4 lg:w-1/2 mx-auto border-2 rounded-md m-1">
-                  <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                <div className="p-4 m-1 mx-auto border-2 rounded-md lg:w-1/2">
+                  <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left">
                     <img
                       alt="team"
-                      className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 border"
+                      className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 border rounded-lg sm:mb-0"
                       src={item.avatar}
+                      loading='lazy'
                     />
                     <div className="flex-grow sm:pl-8">
-                      <h2 className="title-font font-medium text-lg text-gray-900">
+                      <h2 className="text-lg font-medium text-gray-900 title-font">
                         {item.name}
                       </h2>
-                      <h3 className="text-gray-500 mb-3"> {item.subject}</h3>
+                      <h3 className="mb-3 text-gray-500"> {item.subject}</h3>
                       <p className="mb-4">{item.education}</p>
                       <span className="inline-flex">
                         <a className="text-gray-500">
@@ -271,24 +273,25 @@ const Science = () => {
           </section>
 
           <section className="mt-10 profiles__physics reveal--animate">
-            <h3 className="text-xl font-medium title-font text-center text-gray-900 tracking-widest">
+            <h3 className="text-xl font-medium tracking-widest text-center text-gray-900 title-font">
               DEPARTMENT OF PHYSICS
             </h3>
             <hr className="mb-5" />
             <div className="flex flex-wrap ">
               {deptPhysic.map((item) => (
-                <div className="p-4 lg:w-1/2 mx-auto border-2 rounded-md m-1">
-                  <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                <div className="p-4 m-1 mx-auto border-2 rounded-md lg:w-1/2">
+                  <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left">
                     <img
                       alt="team"
-                      className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 border"
+                      className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 border rounded-lg sm:mb-0"
                       src={item.avatar}
+                      loading='lazy'
                     />
                     <div className="flex-grow sm:pl-8">
-                      <h2 className="title-font font-medium text-lg text-gray-900">
+                      <h2 className="text-lg font-medium text-gray-900 title-font">
                         {item.name}
                       </h2>
-                      <h3 className="text-gray-500 mb-3"> {item.subject}</h3>
+                      <h3 className="mb-3 text-gray-500"> {item.subject}</h3>
                       <p className="mb-4">{item.education}</p>
                       <span className="inline-flex">
                         <a className="text-gray-500">
@@ -339,24 +342,25 @@ const Science = () => {
           </section>
 
           <section className="mt-10 profiles__chemistry reveal--animate">
-            <h3 className="text-xl font-medium title-font text-center text-gray-900 tracking-widest">
+            <h3 className="text-xl font-medium tracking-widest text-center text-gray-900 title-font">
               DEPARTMENT OF CHEMISTRY
             </h3>
             <hr className="mb-5" />
             <div className="flex flex-wrap ">
               {deptChemistry.map((item) => (
-                <div className="p-4 lg:w-1/2 mx-auto border-2 m-1 rounded-md">
-                  <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                <div className="p-4 m-1 mx-auto border-2 rounded-md lg:w-1/2">
+                  <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left">
                     <img
                       alt="team"
-                      className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 border"
+                      className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 border rounded-lg sm:mb-0"
                       src={item.avatar}
+                      loading='lazy'
                     />
                     <div className="flex-grow sm:pl-8">
-                      <h2 className="title-font font-medium text-lg text-gray-900">
+                      <h2 className="text-lg font-medium text-gray-900 title-font">
                         {item.name}
                       </h2>
-                      <h3 className="text-gray-500 mb-3"> {item.subject}</h3>
+                      <h3 className="mb-3 text-gray-500"> {item.subject}</h3>
                       <p className="mb-4">{item.education}</p>
                       <span className="inline-flex">
                         <a className="text-gray-500">
@@ -407,24 +411,25 @@ const Science = () => {
           </section>
 
           <section className="mt-10 profiles__maths reveal--animate">
-            <h3 className="text-xl font-medium title-font text-center text-gray-900 tracking-widest">
+            <h3 className="text-xl font-medium tracking-widest text-center text-gray-900 title-font">
               DEPARTMENT OF MATHEMATICS
             </h3>
             <hr className="mb-5" />
             <div className="flex flex-wrap ">
               {deptMath.map((item) => (
-                <div className="p-4 lg:w-1/2 mx-auto border-2 m-1 rounded-md">
-                  <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                <div className="p-4 m-1 mx-auto border-2 rounded-md lg:w-1/2">
+                  <div className="flex flex-col items-center justify-center h-full text-center sm:flex-row sm:justify-start sm:text-left">
                     <img
                       alt="team"
-                      className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4 border"
+                      className="flex-shrink-0 object-cover object-center w-48 h-48 mb-4 border rounded-lg sm:mb-0"
                       src={item.avatar}
+                      loading='lazy'
                     />
                     <div className="flex-grow sm:pl-8">
-                      <h2 className="title-font font-medium text-lg text-gray-900">
+                      <h2 className="text-lg font-medium text-gray-900 title-font">
                         {item.name}
                       </h2>
-                      <h3 className="text-gray-500 mb-3"> {item.subject}</h3>
+                      <h3 className="mb-3 text-gray-500"> {item.subject}</h3>
                       <p className="mb-4">{item.education}</p>
                       <span className="inline-flex">
                         <a className="text-gray-500">
